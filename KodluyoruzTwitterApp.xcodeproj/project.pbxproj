@@ -18,6 +18,7 @@
 		719C4960232387210048EE70 /* SplashAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719C495D232387210048EE70 /* SplashAnimation.swift */; };
 		719C4961232387210048EE70 /* ViewAnimationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719C495E232387210048EE70 /* ViewAnimationExtension.swift */; };
 		719C4962232387210048EE70 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719C495F232387210048EE70 /* SplashView.swift */; };
+		719C496423238AE00048EE70 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 719C496323238AE00048EE70 /* .gitignore */; };
 		8C92F0AB6654FE63E567AB65 /* Pods_KodluyoruzTwitterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7559095E78A207CF0D0A3AF7 /* Pods_KodluyoruzTwitterApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		719C495D232387210048EE70 /* SplashAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashAnimation.swift; sourceTree = "<group>"; };
 		719C495E232387210048EE70 /* ViewAnimationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimationExtension.swift; sourceTree = "<group>"; };
 		719C495F232387210048EE70 /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		719C496323238AE00048EE70 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		7559095E78A207CF0D0A3AF7 /* Pods_KodluyoruzTwitterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KodluyoruzTwitterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B544B0589858E8F8AD4B1D5F /* Pods-KodluyoruzTwitterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KodluyoruzTwitterApp.release.xcconfig"; path = "Target Support Files/Pods-KodluyoruzTwitterApp/Pods-KodluyoruzTwitterApp.release.xcconfig"; sourceTree = "<group>"; };
 		CD86B83DD817CF2E28F851F1 /* Pods-KodluyoruzTwitterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KodluyoruzTwitterApp.debug.xcconfig"; path = "Target Support Files/Pods-KodluyoruzTwitterApp/Pods-KodluyoruzTwitterApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				719C494C2323837C0048EE70 /* Assets.xcassets */,
 				719C494E2323837C0048EE70 /* LaunchScreen.storyboard */,
 				719C49512323837C0048EE70 /* Info.plist */,
+				719C496323238AE00048EE70 /* .gitignore */,
 			);
 			path = KodluyoruzTwitterApp;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				719C496423238AE00048EE70 /* .gitignore in Resources */,
 				719C49502323837C0048EE70 /* LaunchScreen.storyboard in Resources */,
 				719C49582323841F0048EE70 /* GoogleService-Info.plist in Resources */,
 				719C494D2323837C0048EE70 /* Assets.xcassets in Resources */,
