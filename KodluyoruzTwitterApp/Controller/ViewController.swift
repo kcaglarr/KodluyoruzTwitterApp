@@ -16,6 +16,13 @@ class ViewController: UIViewController {
         loadTwitterSplashAnimation()
     }
 
-
+    @IBAction func goAccountPageAction(_ sender: Any) {
+        
+        let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let accountPageVC = storyboard.instantiateViewController(withIdentifier: "AccountPageVC") as? RegisterViewController
+        
+        present(accountPageVC!, animated: true, completion: nil)
+    }
+    
 }
 
