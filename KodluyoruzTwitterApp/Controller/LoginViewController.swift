@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        passwordTextField.setRightIcon(icon: UIImage(named: "show-password")!)
     }
     
     @IBAction func loginButtonAction(_ sender: Any) {
@@ -32,10 +33,7 @@ class LoginViewController: UIViewController {
                 print(error?.localizedDescription)
             }
             else {
-                let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let HomePageVC = storyboard.instantiateViewController(withIdentifier: "HomeVC") as? HomeViewController
-                
-                self?.present(HomePageVC!, animated: true, completion: nil)
+                self?.goToDestination(destinationName: "HomeVC")
             }
         }
         
