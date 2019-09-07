@@ -86,10 +86,10 @@
 				719C49432323837B0048EE70 /* AppDelegate.swift */,
 				719C49472323837B0048EE70 /* ViewController.swift */,
 				719C49492323837B0048EE70 /* Main.storyboard */,
+				719C496323238AE00048EE70 /* .gitignore */,
 				719C494C2323837C0048EE70 /* Assets.xcassets */,
 				719C494E2323837C0048EE70 /* LaunchScreen.storyboard */,
 				719C49512323837C0048EE70 /* Info.plist */,
-				719C496323238AE00048EE70 /* .gitignore */,
 			);
 			path = KodluyoruzTwitterApp;
 			sourceTree = "<group>";
