@@ -13,6 +13,8 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    var ref = Database.database().reference()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,9 +49,10 @@ class RegisterViewController: UIViewController {
                     }
                 }
                 
-               /* self.showAlert(title: "Error", message: error!.localizedDescription, actionOk: "OK", actionCancel: "Cancel")*/
             }
             else {
+                self.ref.child("users").child((result?.user.uid)!).setValue(["email": email])
+                //TODO: kayıt işleminden sonra login sayfasına yönlendirilme işlemi yapılacak
                 print("Kaydedildi")
             }
         }
