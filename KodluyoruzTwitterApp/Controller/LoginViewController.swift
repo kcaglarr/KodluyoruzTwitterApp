@@ -47,4 +47,34 @@ class LoginViewController: UIViewController {
 
 }
 
+extension LoginViewController: UITextViewDelegate {
+    func addToolBar(textField: UITextField) {
+        let toolbar = UIToolbar()
+        // toolbar configuration
+        toolbar.barStyle = UIBarStyle.default
+        toolbar.isTranslucent = true
+        toolbar.tintColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+        
+        // bar buttons (password,space,login)
+        let passwordButton = UIBarButtonItem(title: "Sifremi Unuttum", style: .done, target: self, action: #selector(passwordForgetPressed))
+        let loginButton = UIBarButtonItem(title: "Giris", style: .done, target: self, action: #selector(loginPressed))
+        let spaceArea = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        
+        toolbar.setItems([passwordButton,spaceArea,loginButton], animated: true)
+        toolbar.isUserInteractionEnabled = true
+        toolbar.sizeToFit()
+        
+        textField.inputAccessoryView = toolbar
+    }
+    
+    @objc func passwordForgetPressed() {
+        print("password")
+    }
+    
+    @objc func loginPressed() {
+        print("login")
+        //Förbeyzde kayıtlı kullanıcının girmesini sağlayıp, eğer o kullanıcı yoksa hata mesajları vereceğiz
+        
+    }
+}
 
