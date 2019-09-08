@@ -24,27 +24,6 @@ class LoginViewController: UIViewController {
         passwordTextField.setRightIcon(icon: UIImage(named: "show-password")!)
     }
     
-    @IBAction func loginButtonAction(_ sender: Any) {
-        
-        guard let email = emailTextField.text else { return }
-        guard let password = passwordTextField.text else { return }
-        
-        print(email, password)
-        
-        Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
-            
-            if error != nil {
-                guard let error = error else { return }
-                print(error)
-                //Ödev hatalar yakalanacak
-            }
-            else {
-                self?.goToDestination(destinationName: "HomeVC")
-            }
-        }
-        
-        
-    }
     
 
 }
@@ -76,6 +55,22 @@ extension LoginViewController: UITextViewDelegate {
     @objc func loginPressed() {
         print("login")
         //Förbeyzde kayıtlı kullanıcının girmesini sağlayıp, eğer o kullanıcı yoksa hata mesajları vereceğiz
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        
+        print(email, password)
+        
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
+            
+            if error != nil {
+                guard let error = error else { return }
+                print(error)
+                //Ödev hatalar yakalanacak
+            }
+            else {
+                self?.goToDestination(destinationName: "HomeVC")
+            }
+        }
         
     }
 }

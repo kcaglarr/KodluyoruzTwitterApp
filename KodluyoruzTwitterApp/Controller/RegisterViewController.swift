@@ -52,7 +52,7 @@ class RegisterViewController: UIViewController {
             }
             else {
                 self.ref.child("users").child((result?.user.uid)!).setValue(["email": email])
-                //TODO: kayıt işleminden sonra login sayfasına yönlendirilme işlemi yapılacak
+                //TODO: kayıt işleminden sonra login sayfasına yönlendirilme işlemi yapılacak0
                 print("Kaydedildi")
             }
         }
