@@ -16,4 +16,14 @@ extension UIViewController {
         self.present(HomePageVC, animated: true, completion: nil)
 
     }
+    
+    
+    func showAlert(title: String, message: String, actionOk: String, actionCancel: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let actionOk = UIAlertAction(title: actionOk, style: .default, handler: nil)
+        let actionCancel = UIAlertAction(title: actionCancel, style: .cancel, handler: nil)
+        alert.addAction(actionOk)
+        alert.addAction(actionCancel)
+        self.present(alert, animated: true, completion: nil)
+    }
 }

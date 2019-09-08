@@ -28,3 +28,4 @@ extension UITextField {
         self.isSecureTextEntry = false //Gizliden çıkar
     }
 }
+

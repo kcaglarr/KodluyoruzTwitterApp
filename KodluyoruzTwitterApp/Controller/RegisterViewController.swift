@@ -29,8 +29,27 @@ class RegisterViewController: UIViewController {
         
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
             if error != nil {
-                print(error?.localizedDescription)
-            }else {
+                guard let error = error else { return }
+                
+                if let errorCode = AuthErrorCode(rawValue: error._code) {
+                    switch errorCode {
+                    case .emailAlreadyInUse:
+                        self.showAlert(title: "Error", message: "Email already in use", actionOk: "OK", actionCancel: "Cancel")
+                    case .weakPassword:
+                        self.showAlert(title: "Error", message: "Weak password", actionOk: "OK", actionCancel: "Cancel")
+                    case .invalidEmail:
+                        self.showAlert(title: "Error", message: "Invalid email", actionOk: "OK", actionCancel: "Cancel")
+                    case .operationNotAllowed:
+                        self.showAlert(title: "Error", message: "Operation not allowed", actionOk: "OK", actionCancel: "Cancel")
+                    default:
+                        self.showAlert(title: "Error", message: "Something is wrong", actionOk: "OK", actionCancel: "Cancel")
+
+                    }
+                }
+                
+               /* self.showAlert(title: "Error", message: error!.localizedDescription, actionOk: "OK", actionCancel: "Cancel")*/
+            }
+            else {
                 print("Kaydedildi")
             }
         }
