@@ -15,7 +15,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+    
+        
+        addToolBar(textField: emailTextField)
+        addToolBar(textField: passwordTextField)
         // Do any additional setup after loading the view.
         passwordTextField.setRightIcon(icon: UIImage(named: "show-password")!)
     }
@@ -42,3 +46,5 @@ class LoginViewController: UIViewController {
     
 
 }
+
+
